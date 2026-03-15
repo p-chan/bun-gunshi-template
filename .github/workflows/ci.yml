@@ -58,8 +58,9 @@ jobs:
       - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
       - uses: oven-sh/setup-bun@3d267786b128fe76c2f16a390aa2448b815359f3 # v2.1.2
       - run: bun install
-      - run: bunx gunshi-docs-init
-      - run: git diff --exit-code
+      - run: echo n | bunx gunshi-docs-init
+      - run: bunx oxfmt .agents/skills/use-gunshi-cli/
+      - run: git diff --exit-code .agents/skills/use-gunshi-cli/
 
   check-pinned-actions:
     name: Check Pinned Actions
