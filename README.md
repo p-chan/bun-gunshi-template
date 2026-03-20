@@ -21,6 +21,11 @@ A template for building CLI applications with [Bun](https://bun.sh) and [gunshi]
    git add .
    git commit -m "feat: initial commit"
    ```
+6. Push to GitHub and enable auto-merge:
+   ```bash
+   gh repo create my-cli --public --source=. --push
+   gh repo edit --enable-auto-merge
+   ```
 
 ## Stack
 
